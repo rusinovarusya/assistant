@@ -1,3 +1,10 @@
+:root {
+  --main-color: #0f0f0f;
+  --font-color: #ffffff;
+
+  --font: 400 24px "Roboto", sans-serif;
+}
+
 .App {
   text-align: center;
 }
