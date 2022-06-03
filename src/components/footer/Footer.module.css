@@ -1,0 +1,11 @@
+.footer {
+  padding: 40px 20px;
+  font: var(--font);
+  color: var(--font-color);
+  background-color: var(--main-color);
+}
+
+.link {
+  color: var(--font-color);
+  text-decoration: none;
+}
