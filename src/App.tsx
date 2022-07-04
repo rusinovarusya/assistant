@@ -6,6 +6,10 @@ import Header from './components/header/Header';
 import Logo from './components/logo/Logo';
 import MainContainer from './components/main-container/MainContainer';
 import Main from './components/main/Main';
+import PlansCard from './components/plans-card/PlansCard';
+import Plans from './components/plans/Plans';
+import Random from './components/random/Random';
+import Weather from './components/weather/Weather';
 
 
 function App() {
@@ -18,8 +22,19 @@ function App() {
             <DaylightIndicator />
           </BlockNow>
         </Header>
-        <Main></Main>
-        <Footer></Footer>
+        <Main>
+          <Plans>
+            <PlansCard />
+            <PlansCard />
+            <PlansCard />
+            <PlansCard />
+            <PlansCard />
+            <PlansCard />
+          </Plans>
+          <Weather />
+          <Random />
+        </Main>
+        <Footer />
       </MainContainer>
     </div>
   );

@@ -1,0 +1,7 @@
+.container {
+  grid-area: "plans";
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--extra-color);
+}
