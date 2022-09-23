@@ -141,17 +141,17 @@ export const useWeatherData = (): WeatherContent => {
 
   const weatherContent: WeatherContent = {
     description: data.current.weather[0].description,
-    feelsLike: data.current.feels_like,
+    feelsLike: Math.round(data.current.feels_like),
     humidity: data.current.humidity,
     icon: data.current.weather[0].icon,
     main: data.current.weather[0].main,
     pressure: data.current.pressure,
     rainIn1Hour: data.current.rain["1h"],
     snowIn1Hour: data.current.snow["1h"],
-    temp: data.current.temp,
-    uvi: data.current.uvi,
+    temp: Math.round(data.current.temp),
+    uvi: Math.round(data.current.uvi),
     windDirection: direction[Math.round(Number(data.current.wind_deg) / 45)],
-    windSpeed: data.current.wind_speed
+    windSpeed: Math.round(data.current.wind_speed)
   }
 
   return weatherContent;
