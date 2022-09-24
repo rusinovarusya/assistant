@@ -1,24 +1,26 @@
-import { FC, memo, PropsWithChildren } from "react";
+import { FC, memo, PropsWithChildren, useEffect, useState } from "react";
 import styles from "./BlockNow.module.css";
 
 
 interface BlockNowProps {}
 
-const now = new Date();
-const time = "00:00:00";
-const date = now.toLocaleDateString("en", {
-  year: "numeric",
-  month: "long",
-  weekday: "long",
-  day: "numeric"
-});
-
 const BlockNow: FC<PropsWithChildren<BlockNowProps>> = ({children}) => {
+
+  const [dateState, setDateState] = useState(new Date());
+  useEffect(() => {
+    setInterval(() => setDateState(new Date()), 1000)
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.timeAndDate}>
-        <div>{time}</div>
-        <div>{date}</div>
+        <div>{dateState.toLocaleTimeString()}</div>
+        <div>{dateState.toLocaleDateString("en", {
+          year: "numeric",
+          month: "long",
+          weekday: "long",
+          day: "numeric"
+        })}</div>
       </div>
       {children}
     </div>
