@@ -3,8 +3,9 @@
   grid-template-areas: "plans weather"
                        "plans other"
                        "other random";
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 320px;
   grid-template-rows: 2fr 1fr 200px;
+  gap: 20px;
   padding: 0 20px;
   font: var(--font);
   color: var(--font-color);

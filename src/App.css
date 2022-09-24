@@ -6,6 +6,8 @@
   --font-color: #ffffff;
 
   --font: 400 24px/24px "Roboto", sans-serif;
+
+  /*--daylight-indicator-length: daylightIndicatorLength;*/
 }
 
 .App {
