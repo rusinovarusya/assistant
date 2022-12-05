@@ -11,8 +11,8 @@ export const useDaylightIndicatorData = (): {
   daylightHours: DaylightHours,
   isLoading: boolean
 } => {
-  const lat: number = 0;
-  const lon: number = 0;
+  const lat: number = 51.672;
+  const lon: number = 39.1843;
   const language = "en";
 
   const { data, isLoading } = useGetWeatherQuery({ lat, lon, language });
